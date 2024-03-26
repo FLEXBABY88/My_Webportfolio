@@ -2,19 +2,27 @@ function emailSend(){
      var userName = document.getElementById('name').value; 
         var phone = document.getElementById('phone').value; 
         var email = document.getElementById('email').value; 
-        var Subject= document.getElementById('subject').value;
-        var userName = document.getElementById('name').value; 
-     
+        var subjects= document.getElementById('subjects').value;
+        var messege = document.getElementById('messege').value; 
+     var messageBody ="Name" + userName +
+          "<br/> Phone : " + phone +
+          "<br/> Email : " + email +
+          "<br/> Message: " + messege; 
+          
     Email.send({
     Host : "smtp.elasticemail.com",
     Username : "nathinhlanhla08@gmail.com",
     Password : "D3DB516769887FF4FE0599C0B1A68F4FDE21",
     To : '42019222@mynwu.ac.za',
     From : "nathinhlanhla08@gmail.com",
-    Subject : "This is the subject",
-    Body : "And this is the body"
+    Subject : subjects,
+    Body : messageBody
 }).then(
-  message => alert(message)
+  message => {
+       if(message=='OK'){
+            swal("Successful", "Message sent!", "success"); }
+     else{
+           swal("Error", "Message was not sent!", "error");}
 );
 }
 let menuIcon = document.querySelector('#menu-icon'); 
