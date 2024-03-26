@@ -1,5 +1,16 @@
 function emailSend(){
-    
+     var userName = document.getElementById(
+    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "nathinhlanhla08@gmail.com",
+    Password : "D3DB516769887FF4FE0599C0B1A68F4FDE21",
+    To : '42019222@mynwu.ac.za',
+    From : "nathinhlanhla08@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
 }
 let menuIcon = document.querySelector('#menu-icon'); 
 let navbar = document.querySelector('.navbar'); 
