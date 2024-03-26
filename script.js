@@ -1,5 +1,10 @@
 function emailSend(){
-     var userName = document.getElementById(
+     var userName = document.getElementById('name').value; 
+        var phone = document.getElementById('phone').value; 
+        var email = document.getElementById('email').value; 
+        var Subject= document.getElementById('subject').value;
+        var userName = document.getElementById('name').value; 
+     
     Email.send({
     Host : "smtp.elasticemail.com",
     Username : "nathinhlanhla08@gmail.com",
